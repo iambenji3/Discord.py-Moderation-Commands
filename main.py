@@ -8,7 +8,7 @@ bot = commands.Bot(command_prefix='?')
 
 @bot.command()
 @commands.has_role("Bot-Mod")
-async def kick(ctx, member: discord.Member, *, reason=None):
+async def kick(self, ctx, member: discord.Member, *, reason=None):
 
   if str(ctx.author) != member:
       if reason == None:
